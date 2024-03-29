@@ -1,0 +1,266 @@
+:root{
+    --light-color:olive ;
+    --black-color:rgb(27, 45, 27) ;
+}
+
+*{
+    padding: 1;
+    margin: 1;
+    box-sizing: border-box;
+    outline: none;
+    /* border: none; */
+    /* text-transform: uppercase; */
+    text-decoration: none;
+}
+
+/* Heading */
+
+.heading1{
+    text-align: center;
+    color: #e0ead509;
+    text-transform: uppercase;
+    padding: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading1 span{
+    color: #c4de65;
+    text-transform: uppercase;
+}
+
+.heading2{
+    text-align: center;
+    color: var(--black-color);
+    text-transform: uppercase;
+    padding: 3.5rem;
+    font-size: 4rem;
+}
+
+.heading2 span{
+    color: #202106;
+    text-transform: uppercase;
+}
+
+/* Html */
+
+.html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+
+/* Body */
+
+.body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Header */
+
+.header{
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+}
+
+/* Home */
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 10rem;
+}
+
+.home .image{
+    flex: 1 1 45rem;
+}
+
+.home .image img{
+    width: 100%;
+}
+
+.home .content{
+    flex: 1 1 45rem;
+}
+
+.home .content h3{
+    font-size: 4.5rem;
+    line-height: 2.8;
+    color: var(--black-color);
+    padding: 1rem 0;
+}
+
+.home .content p{
+    color: rgb(105, 223, 170);
+}
+
+/* About */
+
+.about #heading{
+    background-color: var(--black-color);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--black-color);
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image .img{
+    width: 100%;
+}
+
+.about .row .content h3{
+    text-align: center;
+    font-size: 3rem;
+    color: #83c199;
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: #60826e;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about #row{
+    margin-top: 2rem;
+    background: #4c6156;
+}
+
+.about #row .content h3{
+    text-align: center;
+    font-size: 3rem;
+    color: var(--black-color);
+}
+
+.about #row .content p{
+    font-size: 1.6rem;
+    color: var(--black-color);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.about #row .content hr{
+    background: var(--black-color);
+}
+
+/* Portfolio */
+
+.portfolio{
+    align-items: center;
+    background: var(--black-color);
+    display: block;
+}
+
+.portfolio .box-container{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 0rem;
+}
+
+.portfolio .box-container .box{
+    border-radius: .5rem;
+    border: .2rem solid var(#4b6253);
+    padding: 1rem;
+}
+
+.portfolio .box-container .box img{
+    height: 20rem;
+    border-radius: .5rem;
+}
+
+/* Media */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: var(--black);
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+      right: 0;  
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+        color: #698974;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+    }
+
+    .home .content p{
+        font-size: 1.5rem;
+    }
+    
+   
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
